@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    background: #111;
+    min-height: 100vh;
+    overflow: hidden;
+} */
+
+#cont{
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    top: -20px;
+    /* color: #fff; */
+    animation: animate 5s linear forwards;
+    /* you can set infinite too */
+}
+
+.star::before {
+    content: '\f005';
+    font-family: FontAwesome;
+    animation: changecolor 8s linear 1;
+    /* text-shadow: 0 0 5px #fff,
+        0 0 20px #fff,
+        0 0 50px #fff; */
+    text-shadow: 0 0 5px rgb(255,189,27),
+        0 0 20px rgb(255,189,27),
+        0 0 50px rgb(255,189,27);
+}
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        /* color: #fff; */
+    }
+
+    80% {
+        opacity: 1;
+        /* color: rgb(255,189,27); */
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+        /* color: rgb(255,189,27); */
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .star {
+        font-size: 8px; 
+    }
+}
+
+/* @keyframes changecolor {
+    from{
+        text-shadow: 0 0 5px #fff,
+            0 0 20px #fff,
+            0 0 50px #fff;
+    }
+    to{
+        text-shadow: 0 0 5px rgb(255,189,27),
+            0 0 20px rgb(255,189,27),
+            0 0 50px rgb(255,189,27);
+    }
+} */

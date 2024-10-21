@@ -1,0 +1,83 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+} */
+
+/* body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.reel-container {
+    position: absolute;
+    width: 100%; /* Adjust to match your image size */
+    height: 100%; /* Shows a portion of the reel */
+    overflow:hidden;
+    /* border: 2px solid red; */
+}
+
+.reel {
+    padding: 5px;
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+    
+    /* box-sizing: content-box; */
+    /* overflow: clip; */
+}
+
+.reel img {
+    /* position: relative; */
+    border-radius: 8px;
+    max-width: 250px;
+    width: auto;
+    height: auto;
+    /* object-fit: fill; */
+}
+
+#reel1{
+    animation: scrollUp1 10s linear 7s infinite;
+    transform: translateY(0) ;
+}
+
+#reel2{
+    animation: scrollUp2 10s linear 7s infinite;
+    transform: translateY(-100%) ;
+}
+
+@keyframes scrollUp1 {
+    0%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100%);
+    }
+    50.01%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes scrollUp2 {
+    0%{
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+    
+}
+
